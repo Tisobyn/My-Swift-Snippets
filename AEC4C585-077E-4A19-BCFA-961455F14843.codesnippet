@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>AppCoordinator</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class AppCoordinator {
+    
+    private let window: UIWindow
+    
+    init(window: UIWindow){
+        self.window = window
+    }
+    
+    func start(){
+        let startingViewController = ViewController()
+
+        let navigationController = UINavigationController(rootViewController: startingViewController)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+    }
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AEC4C585-077E-4A19-BCFA-961455F14843</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Creating  AppCoordinator class for deleting storyboard</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AppCoordinator</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

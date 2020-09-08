@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>appCoordinator - Scene willConnectTo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    var window: UIWindow?
+    var appCoordinator: AppCoordinator?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let scene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: scene)
+        
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator?.start()
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1696BD53-1C38-47BC-B650-01CDA5E34B92</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Changeing Scene Will Connect To</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AppCoordinator Scene wilConnectTo</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

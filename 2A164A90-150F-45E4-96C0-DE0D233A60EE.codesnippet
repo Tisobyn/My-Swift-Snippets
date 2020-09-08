@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>NSLayoutConstraint</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        &lt;#placeholder#&gt;.translatesAutoresizingMaskIntoConstraints = false
+        let marginTop = NSLayoutConstraint(item: &lt;#placeholder#&gt;, attribute: .top, relatedBy: .equal, toItem: &lt;#toItem#&gt;, attribute: .top, multiplier: 1.0, constant: 50)
+        let marginLeft = NSLayoutConstraint(item: &lt;#placeholder#&gt;, attribute: .left, relatedBy: .equal, toItem: &lt;#toItem#&gt;, attribute: .left, multiplier: 1.0, constant: 20)
+        let marginRight = NSLayoutConstraint(item: &lt;#placeholder#&gt;, attribute: .right, relatedBy: .equal, toItem: &lt;#toItem#&gt;, attribute: .right, multiplier: 1.0, constant: -20)
+        let marginBottom = NSLayoutConstraint(item: &lt;#placeholder#&gt;, attribute: .bottom, relatedBy: .equal, toItem: &lt;#toItem#&gt;, attribute: .bottom, multiplier: 1.0, constant: 100)
+        NSLayoutConstraint.activate([marginTop, marginLeft, marginRight, marginBottom])</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2A164A90-150F-45E4-96C0-DE0D233A60EE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - NSLayoutConstraints </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>RxSwift fetch from JsonFile</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func &lt;#fetchName#&gt;() -&gt; Observable&lt;[&lt;#ModelName#&gt;]&gt;{
+        
+        return Observable.create { observer -&gt; Disposable in
+            
+            guard let path = Bundle.main.path(forResource: "fileName", ofType: "json")
+                else{
+                    observer.onError(NSError(domain: "", code: -1, userInfo: nil))
+                    return Disposables.create {}
+            }
+            
+            do{
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let &lt;#obcname#&gt; = try JSONDecoder().decode([&lt;#ModelName#&gt;].self, from: data)
+                observer.onNext(&lt;#obcname#&gt;)
+            } catch{
+                observer.onError(error)
+            }
+            
+            return Disposables.create {}
+        }
+        
+    }
+    
+//    Calling In Your VC
+//    let disposeBag = DisposeBag() //it have to global in class
+//    let servise = &lt;#NameOfServiseWhichFetchFrom#&gt;()
+//
+//    servise.&lt;#NameOfServiseWhichFetchFrom#&gt;().subscribe(onNext: { &lt;#objects#&gt; in
+//        print(&lt;#objects#&gt;)
+//        }).disposed(by: disposeBag)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>58C89765-798A-445B-8468-D83E4D23874A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>fetching from jsonfile by using rxswift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - RxSwift fetch from json file </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

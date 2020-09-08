@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>RxFetch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func &lt;#fetchName#&gt;() -&gt; Observable&lt;[&lt;#ModelName#&gt;]&gt;{
+        
+        return Observable.create { observer -&gt; Disposable in
+           
+            let task =  URLSession.shared.dataTask(with: URL(string: "url-here")!) {
+                (data, response, error) in
+                
+                guard let data = data else{
+                        observer.onError(NSError(domain: "", code: -1, userInfo: nil))
+                        return //Disposables.create {}
+                }
+                
+                do{
+                    let &lt;#object#&gt; = try JSONDecoder().decode([&lt;#ModelName#&gt;].self, from: data)
+                    observer.onNext(&lt;#object#&gt;)
+                } catch{
+                    observer.onError(error)
+                }
+                
+            }
+            task.resume()
+            
+            return Disposables.create {
+                task.cancel()
+            }
+        }
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>87F158B7-9714-4D46-B473-E48358BDC057</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Service</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - RxSwift fetch from url</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>storyboard</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    static func instantiate() -&gt; UIViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: .main )
+        let viewController = storyboard.instantiateInitialViewController() as! ViewController
+        return viewController
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CFC86B04-C5D6-45F9-9A15-21C8FA2AF227</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>make link programmatically between Storyboard and VC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift - instantiateStoryboard</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
